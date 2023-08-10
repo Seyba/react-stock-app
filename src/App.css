@@ -1,7 +1,13 @@
 .App {
   text-align: center;
 }
-
+body{
+  color: #ffffff;
+  font-size: 20px;
+}
+input{
+  color: #000000;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +41,19 @@
   to {
     transform: rotate(360deg);
   }
+}
+/* navbar styles */
+.container_header{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 40px;
+}
+.brand {
+  width: 20%;
+}
+.nav_links {
+  width: 80%;
+}
+ul li{
+  list-style-type: none;
 }

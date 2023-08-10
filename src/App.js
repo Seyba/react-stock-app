@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+import {useState, useEffect} from "react";
+import { AppRouter } from "./routes/AppRouter"
+import Navbar from './components/Navbar/index'
+import { StocksContext } from "./context/stocksContext";
+import { data } from "./data/data";
 import './App.css';
 
-function App() {
+export default function App(props) {
+  const [stockData, setStockData ] = useState(data)
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StocksContext.Provider value={{stockData}}>
+      <div className="container mx-auto">
+        <Navbar/>
+        <AppRouter/>
+      </div> 
+    </StocksContext.Provider>
   );
 }
-
-export default App;

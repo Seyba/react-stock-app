@@ -20,9 +20,15 @@ export const Home = () => {
             <h2>Home Page</h2>
             <h3>Most Active Stocks</h3>
             <div className="grid grid-cols-3 gap-2">
-                <div>Name</div>
-                <div>Price</div>
-                <div>Change</div>
+                <div>
+                    <h2>Company Name</h2>
+                </div>
+                <div>
+                    <h2>Price</h2>
+                </div>
+                <div>
+                    <h2>Change</h2>
+                </div>
             </div>
             <div className="grid grid-cols-3 gap-2">
                 <div>

@@ -19,7 +19,7 @@ export default function App(props) {
       try{
         const res = await fetch(url)
         const stockAct = await res.json()
-        console.log(stockAct)
+        //console.log(stockAct)
         setActiveStocks(stockAct)
       }catch(e){
         console.log(e)
@@ -29,9 +29,9 @@ export default function App(props) {
     useEffect(() =>{
         getActiveStocks()
     },[])
-  
+    
   return (
-    <StocksContext.Provider value={{stockData}}>
+    <StocksContext.Provider value={{stockData, activeStocks}}>
       <div className="container mx-auto">
         <Navbar/>
         <AppRouter/>
